@@ -4,7 +4,7 @@ function runAction(payload) {
 		const [account] = related.Account;
 		const isProofOfDeliveryRequired = account.ProofOfDeliveryRequired__c;
 		const poNumber = order.PoNumber;
-		if (!account) {
+		if (related.Account === undefined) {
 			throw new Error(`This order is not associated with an account.`);
 		}
 		if (isProofOfDeliveryRequired === undefined) {
