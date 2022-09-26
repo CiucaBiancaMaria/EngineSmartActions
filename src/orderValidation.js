@@ -7,7 +7,9 @@ function runAction(payload) {
 		if (!account) {
 			throw new Error(`This order is not associated with an account.`);
 		}
-
+		if (isProofOfDeliveryRequired === undefined) {
+			throw new Error(`No access to ProofOfDeliveryRequired__c`);
+		}
 		if (isProofOfDeliveryRequired && !poNumber) {
 			throw new Error(`Please fill out the Purchase Order number before completing the order!`);
 		}
