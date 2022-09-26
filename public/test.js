@@ -1,0 +1,1 @@
+function runAction(r){try{const{record:e,related:t}=r.data,[o]=t.Account,c=o.ProofOfDeliveryRequired__c,n=e.PoNumber;if(c&&!n)throw new Error("Please fill out the Purchase Order number before completing the order!");r.data.message="Order Validated"}catch(e){r.data.error=e==null?void 0:e.message}return r}
