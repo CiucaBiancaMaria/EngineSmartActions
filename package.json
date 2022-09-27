@@ -1,8 +1,8 @@
 {
 	"name": "offline-engines-demo",
 	"scripts": {
-		"build:development": "esbuild src/orderValidationForDrivers.js --outdir=public --target=es2015",
-		"build:production": "esbuild src/orderValidationForDrivers.js --outdir=public --target=es2015 --minify"
+		"build:development": "esbuild src/orderValidationForFieldSales.js --outdir=public --target=es2015",
+		"build:production": "esbuild src/orderValidationForFieldSales.js --outdir=public --target=es2015 --minify"
 	},
 	"devDependencies": {
 		"esbuild": "0.13.13"
