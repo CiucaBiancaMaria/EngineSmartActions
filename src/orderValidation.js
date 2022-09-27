@@ -17,5 +17,10 @@ function runAction(payload) {
 	} catch (error) {
 		payload.data.error = error?.message;
 	}
+	payload.data.updateDeviceData = true;
+	payload.data.updateDeviceData.Order = true;
+	payload.data.updateDeviceData.OrderIem = true;
+	payload.data.reprice = true;
+
 	return payload;
 }
